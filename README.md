@@ -1,11 +1,11 @@
 # 食物图像分类项目
 
-作者v：shujinxing777
+作者：xliu
 
-## 📋 项目概述
+## 项目概述
 基于Kaggle食物图像数据集，实现36种水果和蔬菜的自动分类识别。采用科研思维，通过ResNet50、CBAM注意力机制和Swin Transformer的对比实验，探索最优的深度学习架构。
 
-## 🎯 科研设计亮点
+## 科研设计亮点
 
 ### 1. 两阶段迁移学习策略
 - **阶段1**: 冻结backbone，仅训练分类头（10个epoch）
@@ -24,7 +24,7 @@
 - ResNet50 + CBAM (完整)
 - 验证各组件贡献度
 
-## 🚀 快速开始
+##  快速开始
 
 ### 环境配置
 ```bash
@@ -83,7 +83,7 @@ tensorboard --logdir=results --host=0.0.0.0 --port=6008
 # 功能：实时训练曲线、损失变化、准确率变化、学习率调度等
 ```
 
-## 📁 项目结构
+## 项目结构
 ```
 食物/
 ├── config.py              # 配置文件
@@ -103,7 +103,7 @@ tensorboard --logdir=results --host=0.0.0.0 --port=6008
 └── visualizations/      # 可视化结果
 ```
 
-## 🔬 模型架构
+## 模型架构
 
 ### 支持的模型
 - `resnet50`: ResNet50基线模型
@@ -112,7 +112,7 @@ tensorboard --logdir=results --host=0.0.0.0 --port=6008
 - `swin_s`: Swin Transformer Small
 - `swin_b`: Swin Transformer Base
 
-## 📊 可视化功能
+## 可视化功能
 
 ### 1. 数据可视化
 - 数据样本展示（每个类别一张图，5张图共36个子图）
@@ -143,7 +143,7 @@ tensorboard --logdir=results --port=6008
 ### 3. 继续训练时找不到检查点
 - 确保检查点在 `checkpoints/trained_models/` 目录下
 
-## 📈 实验结果
+## 实验结果
 
 ### 1. 模型架构对比实验
 
@@ -207,7 +207,7 @@ tensorboard --logdir=results --port=6008
 
 **注**: 易混淆类包括相似外观的食物，如不同种类的辣椒、柑橘等。
 
-## 🏆 主要发现
+## 主要发现
 
 1. **注意力机制有效性**: CBAM在ResNet50基础上提升1.6%准确率，证明注意力机制的有效性
 2. **Transformer优势**: Swin Transformer在复杂场景下表现更优，但计算成本较高
@@ -215,19 +215,13 @@ tensorboard --logdir=results --port=6008
 4. **数据增强效果**: 针对性的数据增强策略对食物分类任务特别有效
 5. **模型选择权衡**: ResNet50+CBAM在性能和效率间达到最佳平衡
 
-## 📊 技术指标
+## 技术指标
 
 - **最高准确率**: 97.2% (Swin-B)
 - **最佳性价比**: 95.8% (ResNet50+CBAM)
 - **最快推理**: 12.3ms (ResNet50)
 - **最小模型**: 98.5MB (ResNet50)
 
-## 🎯 科研贡献
-
-- **方法对比**: CNN vs Transformer全面对比
-- **注意力机制**: CBAM vs Swin注意力分析
-- **消融实验**: 模块级贡献度验证
-- **可视化工具**: 模型解释性分析工具集
 
 ## 📝 注意事项
 
