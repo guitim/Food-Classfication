@@ -4,7 +4,7 @@
 
 ## 项目概述
 基于Kaggle食物图像数据集，实现36种水果和蔬菜的自动分类识别。采用科研思维，通过ResNet50、CBAM注意力机制和Swin Transformer的对比实验，探索最优的深度学习架构。
-
+https://www.kaggle.com/datasets/kritikseth/fruit-and-vegetable-image-recognition
 ## 科研设计亮点
 
 ### 1. 两阶段迁移学习策略
